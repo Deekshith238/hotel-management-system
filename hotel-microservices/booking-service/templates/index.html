@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>🏨 Available Rooms (via Room Service)</h1>
+    <ul>
+      {% for r in rooms %}
+        <li>{{r.room_type}} - ₹{{r.price}}/night
+          <a href="/book/{{r.id}}">Book Now</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
